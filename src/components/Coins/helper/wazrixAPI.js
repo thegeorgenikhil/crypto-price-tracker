@@ -4,7 +4,7 @@ export const apiCall = async () => {
     const data = await response.json();
     return data;
   } catch (error) {
-    if (error.status == 429) {
+    if (error.status === 429) {
       alert("Too many requests. Please try again after sometime!");
     } else {
       console.log(error);
